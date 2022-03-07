@@ -1,0 +1,303 @@
+[
+  {
+    "pageId": 0,
+    "style": {},
+    "type": "SINGLE_QUESTION",
+    "payload": {
+      "style": {},
+      "texts": [
+        "Welcome to EveryoneIsAVegan.com. The website that might change your life forever!",
+        "Most vegan websites, while lovely and informative, also tend to overwhelm a new visitor. They're shown so much reading material, videos and just too much information in general. And while it is good to have that, it also helps to get to know the user, and tailor arguments specific to their level of understanding, right?",
+        "That's exactly what we do. We'll only tell you what you need to hear and cut the noise, accelerate the process. Isn't that cool?"
+      ],
+      "buttons": {
+        "style": {},
+        "list": [
+          {
+            "text": "I see. Sure!",
+            "nextPageId": 1
+          }
+        ]
+      }
+    }
+  },
+  {
+    "pageId": 1,
+    "style": {},
+    "type": "SINGLE_QUESTION",
+    "payload": {
+      "style": {},
+      "texts": [
+        "Great. So let's get started. We'll ask you some questions to get to know you.",
+        "Firstly, are you a meat-eater, vegetarian or a vegan?"
+      ],
+      "buttons": {
+        "style": {
+          "buttonLayout": "horizontal"
+        },
+        "list": [
+          {
+            "text": "Meat-eater",
+            "nextPageId": 2,
+            "variable": "diet",
+            "value": "MEAT_EATER"
+          },
+          {
+            "text": "Vegetarian",
+            "nextPageId": 3,
+            "variable": "diet",
+            "value": "VEGETARIAN"
+          },
+          {
+            "text": "Vegan",
+            "nextPageId": 2
+          }
+        ]
+      }
+    }
+  },
+  {
+    "pageId": 2,
+    "style": {},
+    "type": "SINGLE_QUESTION",
+    "payload": {
+      "style": {},
+      "texts": [
+        "Since you're a meat-eater, we'll only focus on eliminating meat from your diet today. We've noticed adding dairy to the equation only complicates and confuses. The goal is to have effective, actionable knowledge sharing."
+      ],
+      "buttons": {
+        "style": {},
+        "list": [
+          {
+            "text": "Fair enough",
+            "nextPageId": 4
+          }
+        ]
+      }
+    }
+  },
+  {
+    "pageId": 3,
+    "style": {},
+    "type": "SINGLE_QUESTION",
+    "payload": {
+      "style": {},
+      "texts": ["Are you a meat-eater, vegetarian or a vegan?"],
+      "buttons": {
+        "style": {},
+        "list": [
+          {
+            "text": "Meat-eater",
+            "nextPageId": 4
+          },
+          {
+            "text": "Vegetarian",
+            "nextPageId": 4
+          },
+          {
+            "text": "Vegan",
+            "nextPageId": 4
+          }
+        ]
+      }
+    }
+  },
+  {
+    "pageId": 4,
+    "style": {},
+    "type": "COUNTRY_SELECT",
+    "payload": {
+      "style": {},
+      "texts": [
+        "To keep things relevant to you, can you tell us which country are you from?"
+      ],
+      "buttons": {
+        "style": {},
+        "list": [
+          {
+            "text": "Continue",
+            "nextPageId": 5
+          }
+        ]
+      }
+    }
+  },
+  {
+    "pageId": 5,
+    "style": {},
+    "type": "SINGLE_QUESTION",
+    "payload": {
+      "style": {},
+      "texts": [
+        "This website works at removing what we call cognitive dissonance - a mental blindspot if you will. It's when your mind holds two contradictory thoughts at the same time. \n\"Alcoholics ruin their lives as well as the lives of people around them!\" \n\"Oh my boyfriend might have a drinking problem but he's usually the sweetest guy I know!\""
+      ],
+      "buttons": {
+        "style": {},
+        "list": [
+          {
+            "text": "So you think I currently hold 2 contradictory thoughts?",
+            "nextPageId": 5
+          }
+        ]
+      }
+    }
+  },
+  {
+    "pageId": 5,
+    "style": {},
+    "type": "SINGLE_QUESTION",
+    "payload": {
+      "style": {},
+      "texts": [
+        "We strongly believe that, yes. It's not really surprising since every vegan who used to ${ diet === MEAT_EATER ? \"eat meat\": \"consume dairy\"} will admit to this mental blindspot. And yes, for every such vegan, this admission always comes with a lot of guilt and shame. And when I say a lot, I mean A LOT. You never <span class=\"italic\">really</span> get over it."
+      ],
+      "buttons": {
+        "style": {},
+        "list": [
+          {
+            "text": "Continue",
+            "nextPageId": 6
+          }
+        ]
+      }
+    }
+  },
+  {
+    "pageId": 6,
+    "style": {},
+    "type": "EXCUSE_SELECT",
+    "payload": {
+      "style": {},
+      "texts": [
+        "So, this is how we do things here. I'll present the all the possible reasons why you might think it's not an urgent moral necessity for you to be a vegan. You select the reasons you relate with. And I'll discredit them all, one by one."
+      ],
+      "excuses": [
+        {
+          "excuseId": 1,
+          "text": "It's my personal choice.",
+          "explanations": [
+            {
+              "texts": [
+                "Yes. Just like every crime is a personal choice a criminal makes."
+              ],
+              "possibleReplies": [
+                {
+                  "text": "I got it",
+                  "status": "DISCARDED"
+                },
+                {
+                  "text": "Can you explain more?"
+                }
+              ]
+            },
+            {
+              "texts": [
+                "Personal choices make sense when there's no victim involved. Me preferring mangoes over bananas is a harmless choice. Me liking the color blue is a harmless choice. Me eating an animal isn't a harmless choice."
+              ],
+              "possibleReplies": [
+                {
+                  "text": "I got it",
+                  "status": "DISCARDED"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "excuseId": 2,
+          "text": "I find most vegans to be annoying and judgy.",
+          "explanations": [
+            {
+              "texts": [
+                "You have to separate the people from the philosophy here. Let's say the majority of vegans are annoying moral policing people. Even then, this reason can't be used as a justification to eat meat right?"
+              ],
+              "possibleReplies": [
+                {
+                  "text": "I got it",
+                  "status": "DISCARDED"
+                },
+                {
+                  "text": "Why not?"
+                }
+              ]
+            },
+            {
+              "texts": [
+                "This reasoning only makes sense if you agree that eating meat is morally wrong, but you're still doing it because you find vegans to be annoying. Is that the case?",
+                "That would be like saying, \"Everyone in my class is annoying, I'm burning down my classroom\". You wouldn't justify committing a crime like that right?"
+              ],
+              "possibleReplies": [
+                {
+                  "text": "I got it",
+                  "status": "DISCARDED"
+                },
+                {
+                  "text": "I'm still not convinced"
+                }
+              ]
+            },
+            {
+              "texts": [
+                "Do you realize this excuse will become moot as soon as you agree that eating meat is morally wrong?\nSo, let's mark it as conditional for now okay?"
+              ],
+              "possibleReplies": [
+                {
+                  "text": "Fine",
+                  "status": "CONDITIONAL"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "excuseId": 3,
+          "text": "I can't afford to be a vegan."
+        },
+        {
+          "excuseId": 4,
+          "text": "It's okay if the animals are humanely slaughtered."
+        },
+        {
+          "excuseId": 5,
+          "text": "I find most vegans to be annoying and judgy."
+        },
+        {
+          "excuseId": 6,
+          "text": "I can't afford to be a vegan."
+        },
+        {
+          "excuseId": 7,
+          "text": "It's my personal choice."
+        },
+        {
+          "excuseId": 8,
+          "text": "I find most vegans to be annoying and judgy."
+        },
+        {
+          "excuseId": 9,
+          "text": "I can't afford to be a vegan."
+        },
+        {
+          "excuseId": 11,
+          "text": "It's my personal choice."
+        },
+        {
+          "excuseId": 12,
+          "text": "I find most vegans to be annoying and judgy."
+        },
+        {
+          "excuseId": 13,
+          "text": "I can't afford to be a vegan."
+        }
+      ],
+      "buttons": {
+        "style": {},
+        "list": [
+          {
+            "text": "I've selected my reasons"
+          }
+        ]
+      }
+    }
+  }
+]

@@ -7,7 +7,7 @@ function App() {
       <span>Hey there Vegans</span>
       <button className="btn-style">
         <span>
-          <Link to="/goVegan">CLICK HERE TO GO TO YOUR WEBSITE!</Link>
+          <Link to="/goVegan/pages/0">CLICK HERE TO GO TO YOUR WEBSITE!</Link>
         </span>
       </button>
       <Outlet />

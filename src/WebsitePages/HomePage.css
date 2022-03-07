@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css?family=Patrick+Hand");
+
+.home-pg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font: normal 22px/25px "Patrick Hand", sans-serif;
+  padding: 40px;
+}
