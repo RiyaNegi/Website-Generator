@@ -84,7 +84,9 @@
       "style": {},
       "texts": ["Are you a meat-eater, vegetarian or a vegan?"],
       "buttons": {
-        "style": {},
+        "style": {
+          "buttonLayout": "vertical"
+        },
         "list": [
           {
             "text": "Meat-eater",
@@ -105,7 +107,7 @@
   {
     "pageId": 4,
     "style": {},
-    "type": "COUNTRY_SELECT",
+    "type": "SINGLE_QUESTION",
     "payload": {
       "style": {},
       "texts": [
@@ -116,14 +118,14 @@
         "list": [
           {
             "text": "Continue",
-            "nextPageId": 5
+            "nextPageId": 50
           }
         ]
       }
     }
   },
   {
-    "pageId": 5,
+    "pageId": 50,
     "style": {},
     "type": "SINGLE_QUESTION",
     "payload": {
@@ -290,13 +292,9 @@
           "text": "I can't afford to be a vegan."
         }
       ],
-      "buttons": {
+      "button": {
         "style": {},
-        "list": [
-          {
-            "text": "I've selected my reasons"
-          }
-        ]
+        "text": "I've selected my reasons"
       }
     }
   }

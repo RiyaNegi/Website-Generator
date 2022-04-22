@@ -11,9 +11,13 @@ interface HomePageProps {
 const HomePage = ({ content }: HomePageProps) => {
   const globalStore: any = useContext(GlobalContext);
 
+  const textGenerator = (textArray: Array<String>) => {
+    return textArray.map((i) => <span className="text-spn"> {i} </span>);
+  };
+
   return (
     <div className="home-pg">
-      <span>{content?.payload.texts}</span>
+      {textGenerator(content?.payload.texts!)}
       <Link to={`/goVegan/pages/${globalStore.contentId + 1}`}>
         <button
           className="btn-style"
